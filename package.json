@@ -1,0 +1,16 @@
+{
+  "name": "reql-cli",
+  "version": "1.0.0",
+  "description": "A command line interface for rethinkdb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gordon Dent",
+  "license": "ISC",
+  "dependencies": {
+    "babel": "^4.7.16",
+    "bluebird": "^2.9.14",
+    "rethinkdb": "^1.16.2"
+  }
+}
