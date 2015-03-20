@@ -4,7 +4,7 @@
   "description": "A command line interface for rethinkdb",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node_modules/mocha/bin/mocha --reporter spec test/unit/**/*.js"
   },
   "author": "Gordon Dent",
   "license": "ISC",
@@ -15,5 +15,12 @@
     "keypress": "^0.2.1",
     "optimist": "^0.6.1",
     "rethinkdb": "^1.16.2"
+  },
+  "devDependencies": {
+   "chai": "~1.9.1",
+   "chai-as-promised": "^4.1.1",
+   "mocha": "~1.13.0",
+   "sinon": "^1.12.2",
+   "sinon-chai": "^2.6.0"
   }
 }

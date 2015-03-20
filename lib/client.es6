@@ -87,6 +87,21 @@ class Client {
   }
 
   /**
+   * Evaluate a RethinkDB ReQL expression
+   * 
+   * @param  {RethinkDB} r
+   * @param  {String} query
+   * @return {Object|false}
+   */
+  evaluate(r, query) {
+    try {
+      return eval(query);
+    } catch (e) {
+      return false;
+    }
+  }
+
+  /**
    * Execute a ReQL query and print out the result
    * 
    * @param  {String} query
@@ -108,10 +123,8 @@ class Client {
     /**
      * Evaluate query and reject any invalid code
      */
-    var eq;
-    try {
-      eq = eval(query);
-    } catch (e) {
+    var eq = that.evaluate(r, query);
+    if (!eq) {
       return Promise.reject('[x] Error: Not supported');
     }
     
