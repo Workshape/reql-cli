@@ -160,9 +160,20 @@ class Client {
           that.resultSize++;
         }
       });
+    } else if (cursor.hasOwnProperty('next')) {
+      cursor.next( (e, x) => { 
+        if (!e) {
+          console.log(JSON.stringify(x, null, 2));
+          that.resultSize++;
+        }
+      });
     } else {
-      console.log(cursor);
-      that.resultSize++;
+      console.log(JSON.stringify(cursor, null, 2));
+      if (cursor instanceof Array ) {
+        that.resultSize = cursor.length;
+      } else {
+        that.resultSize++;
+      }
     }
   }
 }

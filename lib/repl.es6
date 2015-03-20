@@ -104,7 +104,7 @@ class REPL {
           that.setInput(that.history[that.historyId--]);
         } else if (that.preHistory) {
           that.clearInput();
-          thst.setInput(that.preHistory);
+          that.setInput(that.preHistory);
           that.preHistory = null;
         }
       } else if (key && !key.ctrl && key.name === 'return') {
@@ -166,7 +166,7 @@ class REPL {
     console.log(clc.yellow(
     `[-] Available commands:
         - dbs - print available databases
-        - current {db} - change current db to {db}
+        - db {db} - change current db to {db}
         - tables - print available tables in current db
         - r... - any rethink valid query, omitting run()
 
