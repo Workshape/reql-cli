@@ -43,12 +43,12 @@ class Client {
     .then( conn => {
       return this.r.tableList().run(conn)
       .then(x =>{
-        conn.close()
+        conn.close();
         return x;
       });
     })
-    .then( list => {
-      var output = `[-] Available tables in ${this.config.db} on ${this.config.host}:`
+    .then(list => {
+      var output = `[-] Available tables in ${this.config.db} on ${this.config.host}:`;
       if (list.length === 0) {
         output += '\n  NONE';
       } else {
@@ -66,14 +66,14 @@ class Client {
    */
   getDbList() {
     return this.connect()
-    .then( conn => {
+    .then(conn => {
       return this.r.dbList().run(conn)
       .then(x =>{
         conn.close()
         return x;
       });
     })
-    .then( list => {
+    .then(list => {
       var output = `[-] Available databases on ${this.config.host}:`
       if (list.length === 0) {
         output += '\n  NONE';
@@ -133,7 +133,7 @@ class Client {
       return eq.run(conn)
       .then(this.handleResponse.bind(this))
       .then(function() {
-        return conn.close()
+        return conn.close();
       })
       .then(function() {
         var endTime = +new Date(),
@@ -141,7 +141,7 @@ class Client {
         console.log(clc.cyanBright(`[.] Took: ${diff} seconds`));
         console.log(clc.cyanBright(`[.] No Results: ${that.resultSize}`));
         that.resultSize = 0;
-      })
+      });
     });
   }
 

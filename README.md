@@ -1,6 +1,16 @@
 #### ReQL CLI
 
-This is a [RethinkDB](http://www.rethinkdb.com) command line tool written in ES6. You can use the native Javascript API to query your database.
+We wanted to be able to query our [RethinkDB](http://www.rethinkdb.com) cluster from the command line 
+and we released there wasn't an obvious way to do this whilst continuing to use the Javascript API.
+
+This is the result of a hack day and messing about with some aspects of ES6 at the same time.
+
+We would welcome other contributors to this project.
+
+#### Notes
+
+We decided not to use the Node.js REPL in favour of a very basic custom implementation - therefore
+currently some common convenience keystrokes do not currently work.
 
 #### Usage
 
