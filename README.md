@@ -1,7 +1,7 @@
 #### ReQL CLI
 
 We wanted to be able to query our [RethinkDB](http://www.rethinkdb.com) cluster from the command line 
-and we relised there wasn't an obvious way to do this whilst continuing to use the Javascript API.
+and we realised there wasn't an obvious way to do this whilst continuing to use the Javascript API.
 
 This is the result of this desire + a hack day and messing about with some aspects of ES6 at the same time.
 
