@@ -25,10 +25,12 @@ class Client {
 
   setDb(val) {
     if (!val) {
-      return Promise.reject('[x] Error: No Db specified');
+      console.log(clc.cyanBright(`[x] Current db is: ${this.config.db}`));
+    } else {
+      this.config.db = val;
+      console.log(clc.cyanBright(`[.] Changed default database to ${val}`));
     }
-    this.config.db = val;
-    console.log(clc.cyanBright(`[.] Changed default database to ${val}`));
+    
     return Promise.resolve();
   }
 
