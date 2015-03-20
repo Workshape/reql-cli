@@ -7,7 +7,8 @@ process.env.NODE_CONFIG_DIR = process.env.NODE_CONFIG_DIR || './config';
 
 var config = {
   host : 'localhost',
-  port : 28015
+  port : 28015,
+  db: 'test'
 };
 
 var r = require('rethinkdb');

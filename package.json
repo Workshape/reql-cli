@@ -11,6 +11,8 @@
   "dependencies": {
     "babel": "^4.7.16",
     "bluebird": "^2.9.14",
+    "cli-color": "^0.3.2",
+    "keypress": "^0.2.1",
     "rethinkdb": "^1.16.2"
   }
 }
