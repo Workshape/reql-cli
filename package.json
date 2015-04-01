@@ -1,12 +1,14 @@
 {
   "name": "reql-cli",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "preferGlobal": true,
   "private": false,
   "description": "A command line interface for rethinkdb",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "node_modules/mocha/bin/mocha --reporter spec test/unit/**/*.js"
+    "test": "node_modules/mocha/bin/mocha --reporter spec test/unit/**/*.js",
+    "compile": "babel -d lib/ src/",
+    "prepublish": "npm run compile"
   },
   "bin": {
     "reql-cli": "./bin/reql-cli"

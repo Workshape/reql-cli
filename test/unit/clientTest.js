@@ -11,7 +11,7 @@ var sinonChai = require('sinon-chai');
 chai.use(chaiAsPromised);
 chai.use(sinonChai);
 
-var Client = require('../../lib/client');
+var Client = require('../../src/client');
 
 describe('Client', function() {
   var expect = chai.expect;

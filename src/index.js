@@ -24,8 +24,8 @@ if (opt.argv.help) {
 
 var r = require('rethinkdb');
 var Promise = require('bluebird');
-var Client = require('./lib/client');
-var REPL = require('./lib/repl');
+var Client = require('./client');
+var REPL = require('./repl');
 
 var client = new Client(r, config);
 var repl = new REPL(client);
