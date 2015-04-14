@@ -19,10 +19,11 @@ class REPL {
     }
 
     this.input = [];
+    this.cursor = 0;
 
     this.ignoredKeys = [
       'f1', 'f2', 'f3', 'f4', 'f5', 'f6', 'f7', 'f8', 'f9', 'f10', 'f11', 'f12',
-      'right', 'left', 'clear'
+      'clear'
     ]
   }
 
@@ -123,10 +124,30 @@ class REPL {
         if (that.input.length > 0) {
           process.stdout.write('\b \b', 'utf8');
           that.input.pop();
+          if (that.cursor > 0) {
+            process.stdout.write('\b', 'utf8');
+            that.cursor--;
+          }
+        }
+      } else if (key && !key.ctrl && (key.name === 'left')) {
+        if (that.input.length > 0 && that.cursor < that.input.length) {
+          process.stdout.write('\b', 'utf8');
+          that.cursor++;
+        }
+      } else if (key && !key.ctrl && (key.name === 'right')) {
+        if (that.input.length > 0 && that.cursor > 0) {
+
+          process.stdout.write(that.input[that.input.length-that.cursor], 'utf8');
+          --that.cursor;
         }
       } else {
         process.stdout.write(ch, 'utf8');
-        that.input.push(ch);
+        if(that.cursor !== 0) {
+          that.input[that.input.length-that.cursor] = ch;
+          --that.cursor;
+        } else {
+          that.input.push(ch);
+        }
       }
     });
 
