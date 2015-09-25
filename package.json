@@ -1,6 +1,6 @@
 {
   "name": "reql-cli",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "preferGlobal": true,
   "private": false,
   "description": "A command line interface for rethinkdb",
@@ -20,18 +20,18 @@
   "author": "Gordon Dent",
   "license": "ISC",
   "dependencies": {
-    "babel": "^4.7.16",
-    "bluebird": "^2.9.14",
-    "cli-color": "^0.3.2",
-    "keypress": "^0.2.1",
-    "optimist": "^0.6.1",
-    "rethinkdb": "^1.16.2"
+    "babel": "5.8.x",
+    "bluebird": "2.10.*",
+    "cli-color": "0.3.x",
+    "keypress": "0.2.x",
+    "optimist": "0.6.x",
+    "rethinkdb": "2.1.x"
   },
   "devDependencies": {
-   "chai": "~1.9.1",
-   "chai-as-promised": "^4.1.1",
-   "mocha": "~1.13.0",
-   "sinon": "^1.12.2",
-   "sinon-chai": "^2.6.0"
+   "chai": "3.3.x",
+   "chai-as-promised": "5.1.x",
+   "mocha": "2.3.x",
+   "sinon": "1.17.x",
+   "sinon-chai": "2.8.x"
   }
 }

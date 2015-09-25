@@ -82,7 +82,7 @@ class REPL {
     var that = this;
     var keypress = require('keypress');
 
-    process.stdout.write(clc.green('- RethinkDB Command Line Interface v1.0.0\n- Courtesy of Workshape.io'))
+    process.stdout.write(clc.green('- RethinkDB Command Line Interface v1.0.7\n- Courtesy of Workshape.io'))
     that.prompt();
     process.stdin.setEncoding('utf8');
     
