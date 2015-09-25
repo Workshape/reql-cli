@@ -16,6 +16,7 @@ $ [sudo] npm install -g reql-cli
 $ reql-cli --help
 ```
 [![Circle CI](https://circleci.com/gh/Workshape/reql-cli.svg?style=svg)](https://circleci.com/gh/Workshape/reql-cli)
+
 [![NPM](https://nodei.co/npm/reql-cli.png?downloads=true&stars=true)](https://nodei.co/npm/reql-cli)
 
 Note: you will need `node` and `npm` installed first.
