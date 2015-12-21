@@ -1,6 +1,6 @@
 {
   "name": "reql-cli",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "preferGlobal": true,
   "private": false,
   "description": "A command line interface for rethinkdb",
@@ -21,11 +21,11 @@
   "license": "ISC",
   "dependencies": {
     "babel": "5.8.x",
-    "bluebird": "2.10.*",
-    "cli-color": "0.3.x",
+    "bluebird": "3.1.x",
+    "cli-color": "1.1.x",
     "keypress": "0.2.x",
     "optimist": "0.6.x",
-    "rethinkdb": "2.1.x"
+    "rethinkdb": "2.2.x"
   },
   "devDependencies": {
    "chai": "3.3.x",
