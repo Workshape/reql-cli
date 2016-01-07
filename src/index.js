@@ -6,15 +6,17 @@ require('babel/register');
 process.env.NODE_CONFIG_DIR = process.env.NODE_CONFIG_DIR || './config';
 
 var opt = require('optimist')
-  .usage('Usage: $0 -h [host] -p [post] -d [db]')
+  .usage('Usage: $0 -h [host] -p [post] -d [db] -a [authKey]')
   .default('h' , 'localhost')
   .default('p', 28015)
-  .default('d', 'test');
+  .default('d', 'test')
+  .default('a', '');
 
 var config = {
   host : opt.argv.h,
   port : opt.argv.p,
-  db: opt.argv.d
+  db: opt.argv.d,
+  authKey : opt.argv.a,
 };
 
 if (opt.argv.help) {
